@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./src/style.css">
@@ -18,10 +18,25 @@
 
 <body>
 
+  <!-- =================== ANNOUNCEMENT POPUP =================== -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-card">
+      <button class="popup-close" id="popupClose" aria-label="Close">&times;</button>
+      <span class="popup-badge">Announcement</span>
+      <h3>COCIS Week is Almost Here! 🎉</h3>
+      <p>Mark your calendars — June 9 to 11, 2026. Registration details, speaker reveals, and more updates dropping
+        soon. Stay tuned!</p>
+      <button class="btn btn-accent popup-dismiss" id="popupDismiss">Got it!</button>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo">COCIS<span>WEEK</span></a>
+      <a href="#" class="logo">
+        <img class="logo-light" src="./src/assets/Logo/COCIS%20BRANDING%2002.svg" alt="COCIS WEEK" />
+        <img class="logo-dark" src="./src/assets/Logo/COCIS%20BRANDING%2003.svg" alt="COCIS WEEK" />
+      </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero">Home</a></li>
         <li><a href="#day1">Day 1</a></li>
@@ -114,7 +129,7 @@
 
       <div class="section-cta">
         <a href="#" class="btn btn-accent"
-          onclick="event.preventDefault(); alert('Day 1 registration form coming soon!')">Register for Day 1</a>
+          onclick="event.preventDefault(); alert('Day 1 registration form coming soon!')">Register</a>
       </div>
     </div>
   </section>
@@ -183,7 +198,8 @@
       </div>
 
       <div class="section-cta">
-        <a href="#" class="btn btn-culture" onclick="event.preventDefault(); alert('Dinner tickets coming soon!')">Get
+        <a href="#" class="btn btn-culture"
+          onclick="event.preventDefault(); alert('A date and time will be communicated to pick up your dinner tag and souvenirs. STAY TUNED!')">Get
           Dinner Tickets</a>
       </div>
     </div>
@@ -197,8 +213,123 @@
         <p class="section-lead">The team making it all happen.</p>
       </div>
 
-      <div class="exec-grid" id="execGrid">
-        <!-- 16 excos rendered via JS below -->
+      <div class="exec-grid">
+        <!-- Row 1 -->
+        <div class="exec-card">
+          <img src="./src/assets/excos/president.jpg" alt="President" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">ALAKA ANUOLUWAPO MARY</h4>
+          <p class="exec-role">President</p>
+        </div>
+        <div class="exec-card">
+          <img src="./src/assets/excos/vice-president.jpg" alt="Vice President" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Vice President</p>
+        </div>
+        <div class="exec-card">
+          <img src="./src/assets/excos/gen-secretary.jpg" alt="General Secretary" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">General Secretary</p>
+        </div>
+        <div class="exec-card">
+          <img src="./src/assets/excos/asst-secretary.jpg" alt="Asst. Secretary" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Asst. Secretary</p>
+        </div>
+        <!-- Row 2 -->
+        <div class="exec-card">
+          <img src="./src/assets/excos/financial-sec.jpg" alt="Financial Secretary" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Financial Secretary</p>
+        </div>
+        <div class="exec-card">
+          <img src="./src/assets/excos/treasurer.jpg" alt="Treasurer" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Treasurer</p>
+        </div>
+        <div class="exec-card">
+          <img src="./src/assets/excos/pro.jpg" alt="PRO" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Public Relations</p>
+        </div>
+        <div class="exec-card">
+          <img src="./src/assets/excos/social-director.jpg" alt="Social Director" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Social Director</p>
+        </div>
+        <!-- Row 3 -->
+        <div class="exec-card">
+          <img src="./src/assets/excos/sports-director.jpg" alt="Sports Director" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Sports Director</p>
+        </div>
+        <div class="exec-card">
+          <img src="./src/assets/excos/welfare-director.jpg" alt="Welfare Director" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Welfare Director</p>
+        </div>
+        <div class="exec-card">
+          <img src="./src/assets/excos/academic-director.jpg" alt="Academic Director" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Academic Director</p>
+        </div>
+        <div class="exec-card">
+          <img src="./src/assets/excos/tech-lead.jpg" alt="Tech Lead" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Tech Lead</p>
+        </div>
+        <!-- Row 4 -->
+        <div class="exec-card">
+          <img src="./src/assets/excos/media-head.jpg" alt="Media Head" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Media Head</p>
+        </div>
+        <div class="exec-card">
+          <img src="./src/assets/excos/logistics.jpg" alt="Logistics Director" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Logistics Director</p>
+        </div>
+        <div class="exec-card">
+          <img src="./src/assets/excos/events-coord.jpg" alt="Events Coordinator" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Events Coordinator</p>
+        </div>
+        <div class="exec-card">
+          <img src="./src/assets/excos/chaplain.jpg" alt="Chaplain" class="exec-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
+          <h4 class="exec-name">TBA</h4>
+          <p class="exec-role">Chaplain</p>
+        </div>
       </div>
     </div>
   </section>
@@ -213,7 +344,7 @@
           categories will open soon.</p>
         <form class="notify-form"
           onsubmit="event.preventDefault(); alert('You will be notified when nominations open!');">
-          <input type="email" placeholder="your.email@caleb.edu" required />
+          <input type="email" placeholder="your.email@calebuniversity.edu.ng" required />
           <button type="submit" class="btn btn-accent">Notify Me</button>
         </form>
       </div>
@@ -224,7 +355,9 @@
   <footer>
     <div class="container footer-grid">
       <div class="footer-brand">
-        <h3 class="logo">COCIS<span>WEEK</span></h3>
+        <a href="#" class="logo">
+          <img src="./src/assets/Logo/COCIS%20BRANDING%2002.svg" alt="COCIS WEEK" />
+        </a>
         <p>College of Computing &amp; Information Science, Caleb University, Imota, Lagos.</p>
       </div>
       <div class="footer-contact">

@@ -1,5 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ---- ANNOUNCEMENT POPUP ----
+  const popupOverlay = document.getElementById('popupOverlay');
+  const popupClose = document.getElementById('popupClose');
+  const popupDismiss = document.getElementById('popupDismiss');
+
+  // Show popup after a short delay
+  setTimeout(() => {
+    if (popupOverlay) popupOverlay.classList.add('active');
+  }, 1500);
+
+  function closePopup() {
+    if (popupOverlay) popupOverlay.classList.remove('active');
+  }
+  if (popupClose) popupClose.addEventListener('click', closePopup);
+  if (popupDismiss) popupDismiss.addEventListener('click', closePopup);
+  // Close on clicking outside the card
+  if (popupOverlay) {
+    popupOverlay.addEventListener('click', (e) => {
+      if (e.target === popupOverlay) closePopup();
+    });
+  }
+
   // ---- NAVBAR: Scroll background change ----
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
@@ -29,28 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // ---- RENDER 16 EXECUTIVES ----
-  const execRoles = [
-    'President', 'Vice President', 'General Secretary', 'Asst. Secretary',
-    'Financial Secretary', 'Treasurer', 'Public Relations Officer', 'Social Director',
-    'Sports Director', 'Welfare Director', 'Academic Director', 'Tech Lead',
-    'Media Head', 'Logistics Director', 'Events Coordinator', 'Chaplain'
-  ];
-
-  const execGrid = document.getElementById('execGrid');
-  if (execGrid) {
-    execRoles.forEach(role => {
-      const card = document.createElement('div');
-      card.className = 'exec-card reveal';
-      card.innerHTML = `
-        <div class="exec-avatar"><i class="bx bx-question-mark"></i></div>
-        <h4>Unveiling Soon</h4>
-        <p class="exec-role">${role}</p>
-      `;
-      execGrid.appendChild(card);
-    });
-  }
 
   // ---- SCROLL REVEAL ANIMATION ----
   const revealElements = document.querySelectorAll(
